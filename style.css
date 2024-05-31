@@ -1,8 +1,15 @@
+
+
 * {
     margin: 0;
     padding: 0;
-    /*outline: 1px dotted rgb(255, 0, 0); */
+    /* outline: 1px dotted rgb(255, 0, 0); */
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 15vh;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +47,7 @@ ul {
 a {
     color: #64FFDA;
     text-decoration: none;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
 }
 
 a:hover {
@@ -77,11 +84,7 @@ body {
     background: #0A192F;
     overflow: auto;
     display: flex;
-    font-family: "Fira Code";
-}
-
-html {
-    scroll-behavior: smooth;
+    font-family: "Anta", sans-serif;
 }
 
 #container-sobre {
@@ -92,6 +95,13 @@ html {
     flex-direction: row;
     color: #fff;
     z-index: 0;
+}
+
+#container-sobre::before {
+    content: "";
+    display: block;
+    height: 50vh;
+    margin: 45vw 0 0 0;
 }
 
 .texto-sobre {
@@ -117,10 +127,6 @@ html {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.texto-sobre {
-    animation: fade-in 2.5s;
 }
 
 .texto-sobre h1 {
@@ -150,8 +156,13 @@ html {
 }
 
 .tecnologias {
-    margin-left: 5%;
-    column-count: 3;
+    margin: 0vh 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tecnologias>.basic {
+    flex: 1 0 33.33%;
 }
 
 .tecnologias li {
@@ -159,20 +170,225 @@ html {
     break-inside: avoid;
 }
 
-.seta1 {
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    right: 28%;
-    top: 25%;
+.basic {
+    width: 30%;
+    height: 2;
+    user-select: none;
+    margin: 0.5vw 0vw 0 0vw;
 }
 
-.seta2 {
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    right: 18%;
-    top: 80%;
+.basic:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+    color: #64FFDA;
+    cursor: pointer;
+}
+
+.datas {
+    width: 80vw;
+}
+
+.datas .data {
+    margin: 17px 0 0 0;
+}
+
+.datas .data .text {
+    font-size: 16px;
+}
+
+.datas .data .text .left {
+    float: left;
+}
+
+.datas .data .line {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 10px;
+    background: #0A192F;
+    border: solid 1px #64FFDA;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    width: 100%;
+    background: #64FFDA;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3em;
+}
+
+.html.basic:hover~.datas .time .fill {
+    transform: scaleX(0.7) translate3d(0, 0, 0);
+}
+
+.html.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.8) translate3d(0, 0, 0);
+}
+
+.css.basic:hover~.datas .time .fill {
+    transform: scaleX(0.7) translate3d(0, 0, 0);
+}
+
+.css.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.8) translate3d(0, 0, 0);
+}
+
+.javascript.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.javascript.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.6) translate3d(0, 0, 0);
+}
+
+.php.basic:hover~.datas .time .fill {
+    transform: scaleX(0.2) translate3d(0, 0, 0);
+}
+
+.php.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.java.basic:hover~.datas .time .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.java.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.2) translate3d(0, 0, 0);
+}
+
+.mysql.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.mysql.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.c.basic:hover~.datas .time .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.c.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.2) translate3d(0, 0, 0);
+}
+
+.oracle.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.oracle.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.sql.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.sql.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.git.basic:hover~.datas .time .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.git.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.linux.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.linux.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.python.basic:hover~.datas .time .fill {
+    transform: scaleX(0.6) translate3d(0, 0, 0);
+}
+
+.python.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.react.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.react.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.bootstrap.basic:hover~.datas .time .fill {
+    transform: scaleX(0.6) translate3d(0, 0, 0);
+}
+
+.bootstrap.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.8) translate3d(0, 0, 0);
+}
+
+.nodejs.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.nodejs.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.react.basic:hover~.datas .time .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.react.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
+}
+
+.flutter.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.flutter.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.cobol.basic:hover~.datas .time .fill {
+    transform: scaleX(0.3) translate3d(0, 0, 0);
+}
+
+.cobol.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.2) translate3d(0, 0, 0);
+}
+
+.photoshop.basic:hover~.datas .time .fill {
+    transform: scaleX(0.9) translate3d(0, 0, 0);
+}
+
+.photoshop.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.8) translate3d(0, 0, 0);
+}
+
+.illustrator.basic:hover~.datas .time .fill {
+    transform: scaleX(0.8) translate3d(0, 0, 0);
+}
+
+.illustrator.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.9) translate3d(0, 0, 0);
+}
+
+.automacao.basic:hover~.datas .time .fill {
+    transform: scaleX(0.5) translate3d(0, 0, 0);
+}
+
+.automacao.basic:hover~.datas .xp .fill {
+    transform: scaleX(0.4) translate3d(0, 0, 0);
 }
 
 .especializacao {
@@ -210,10 +426,18 @@ html {
 
 span:hover {
     color: #fff;
+    cursor: pointer;
 }
 
 .especializacao p {
     margin-top: 10%;
+}
+
+.especializacao::before {
+    content: "";
+    display: block;
+    height: auto;
+    margin: 10vw 0 0 0;
 }
 
 .escada {
@@ -232,21 +456,8 @@ span:hover {
     padding: 0em 7em 7em 7em;
 }
 
-.obj1,
-.obj2,
-.obj3,
-.obj4,
-.obj5,
-.obj6,
-.obj7,
-.obj8,
-.obj9,
-.obj10,
-.obj11,
-.obj12,
-.obj13,
-.obj14 {
-    transition: 1s;
+.obj1, .obj4, .obj5, .obj8, .obj9, .obj12, .obj13 {
+    transform: initial scale(45);
 }
 
 .obj2,
@@ -259,20 +470,6 @@ span:hover {
     margin-top: 5vh;
 }
 
-.obj1:hover,
-.obj5:hover,
-.obj9:hover {
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-.obj4:hover,
-.obj8:hover,
-.obj12:hover,
-.obj13:hover {
-    transform: scale(1.1);
-    transition: 1s;
-}
 
 .projetos h3 {
     font-size: 2rem;
@@ -321,7 +518,7 @@ span:hover {
     margin-bottom: 5%;
     color: rgb(255, 255, 255);
     font-size: 1em;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
 }
 
 #txt-contato h1 {
@@ -343,7 +540,7 @@ span:hover {
     border-radius: 0.625rem;
     color: #0A192F;
     font-size: 1.5em;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
     padding: 0.3125rem;
     margin-top: 0.3125rem;
     margin-bottom: 0.3125rem;
@@ -359,7 +556,7 @@ span:hover {
     border-radius: 0.625rem;
     color: #0A192F;
     font-size: 1.5em;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
     padding: 0.3125rem;
     margin-top: 0.3125rem;
     margin-bottom: 0.3125rem;
@@ -377,7 +574,7 @@ span:hover {
     border: 1px solid #64FFDA;
     color: #ffffff;
     font-size: 1.5em;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
     padding: 0.3125rem;
     margin: 1rem;
     transition: 0.5s;
@@ -451,7 +648,7 @@ span:hover {
     border: 1px solid #64FFDA;
     color: #ffffff;
     font-size: 1.5em;
-    font-family: "Fira Code";
+    font-family: "Anta", sans-serif;
     padding: 0.3125rem;
     margin: 1rem;
     transition: 0.5s;
@@ -472,15 +669,12 @@ span:hover {
     font-size: 15px;
     position: relative;
     margin: 0;
-    bottom: 0;
     width: auto;
-    height: 10vh;
+    height: 8vh;
     background-color: #0A192F;
     border-top: solid 1px #64FFDA;
     border-radius: 1.5rem 1.5rem 0 0;
-    text-align: center;
-    line-height: 6.25rem;
-
+    text-align: center;  
 }
 
 #rodape a {
@@ -504,9 +698,18 @@ span:hover {
     margin: 0;
 }
 
-/*media query para telas menores que 768px*/
+/*media query para telas menores que 768px celulares*/
 
 @media (max-width: 799px) {
+
+    header {
+        width: 100vw;
+    }
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
 
     .logo-responsivo {
         width: auto;
@@ -518,7 +721,7 @@ span:hover {
         position: absolute;
         width: 50%;
         height: 0;
-        top: 70px;
+        top: 14vh;
         right: 0;
         background: #0A192F;
         transition: 0.6s;
@@ -528,14 +731,14 @@ span:hover {
     }
 
     #nav.active #menu {
-        height: 35vh;
+        height: 16rem;
         visibility: visible;
         overflow-y: auto;
         border-style: solid;
         border-bottom-left-radius: 0rem;
         border-color: #64FFDA;
-        /*clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%, 0 81%);*/
     }
+
 
     #menu a {
         color: #ffffff;
@@ -578,11 +781,12 @@ span:hover {
 
     #nav.active #hamburger::before {
         transform: rotate(135deg);
-        top: 7px;
+        /* top: 7px; */
     }
 
     #nav.active #hamburger::after {
         transform: rotate(-135deg);
+        bottom: 7px;
     }
 
     #container-sobre,
@@ -594,6 +798,13 @@ span:hover {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+    }
+
+    #container-sobre::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
     }
 
     #rosto {
@@ -632,6 +843,13 @@ span:hover {
         align-items: center;
         position: relative;
         font-size: 1rem;
+    }
+
+    .especializacao::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
     }
 
     .projetos {
@@ -775,6 +993,13 @@ span:hover {
         align-items: center;
     }
 
+    #container-sobre::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
+    }
+
     #rosto {
         width: 80%;
         height: auto;
@@ -805,6 +1030,13 @@ span:hover {
 
     .texto-sobre ul li {
         text-align: left;
+    }
+
+    .especializacao::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
     }
 
     #habilidades {
@@ -941,6 +1173,20 @@ span:hover {
 
     #menu li {
         margin: 0 1.5vw 0 1.5vw;
+    }
+
+    #container-sobre::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
+    }
+
+    .especializacao::before {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 0 0 0;
     }
 
     #habilidades {

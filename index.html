@@ -6,6 +6,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
@@ -39,50 +47,72 @@
         <script src="script.js"></script>
     </header>
 
-    <div class="container-sobre" id="container-sobre">
+    <div data-aos="zoom-out-right" class="container-sobre" id="container-sobre">
 
         <div class="texto-sobre">
             <h1>Olá, me chamo <span class="meu-nome">Gabriel Ramos</span></h1>
 
-            <p>Sempre apaixonado por tecnologia, descobri minha vocação como desenvolvedor desde a infância.
-                Recentemente formado em Análise e Desenvolvimento de Sistemas, estou em busca de oportunidades
-                para criar soluções inovadoras na área de Tecnologia da Informação. Possuo experiência
-                em diversas tecnologias, tais como:</p>
-            </p>
+            <p>Com 29 anos de idade, mantenho um compromisso firme com o crescimento contínuo, tanto pessoal quanto profissional. Sou conhecido por minha determinação em buscar novos conhecimentos e aprimoramento constante. Minha disciplina e habilidades de liderança me permitem trabalhar de forma eficaz em equipe, promovendo um ambiente colaborativo e produtivo. Tenho a capacidade de me adaptar facilmente a diferentes contextos e estou empenhado em criar ambientes acolhedores e inclusivos para todos. Valorizo a igualdade e o respeito em todas as minhas interações e estou confortável em lidar com pressão e cumprir prazos</p>
 
-            <ul class="tecnologias">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>Java</li>
-                <li>MySQL</li>
-                <li>C++</li>
-                <li>Oracle</li>
-                <li>SQL Server</li>
-                <li>Git</li>
-                <li>Linux</li>
-                <li>Python</li>
-                <li>React</li>
-                <li>Bootstrap</li>
-                <li>Node</li>
-                <li>React Native</li>
-                <li>Flutter</li>
-                <li>Android</li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-            </ul>
+            <div class="tecnologias">
+                <div class="html basic">HTML</div>
+                <div class="css basic">CSS</div>
+                <div class="javascript basic">JavaScript</div>
+                <div class="php basic">PHP</div>
+                <div class="java basic">Java</div>
+                <div class="mysql basic">MySQL</div>
+                <div class="c basic">C++</div>
+                <!--<div class="oracle basic">Oracle</div>-->
+                <div class="sql basic">SQL Server</div>
+                <div class="git basic">Git</div>
+                <div class="python basic">Python</div>
+                <div class="react basic">React</div>
+                <div class="bootstrap basic">Bootstrap</div>
+                <div class="nodejs basic">NodeJS</div>
+                <!--<div class="react basic">React Native</div>-->
+                <div class="flutter basic">Flutter</div>
+                <div class="cobol basic">COBOL</div>
+                <div class="photoshop basic">Photoshop</div>
+                <div class="illustrator basic">Illustrator</div>
+                <div class="automacao basic">Automação</div>
+                <div class="linux basic">Linux SO</div>
+
+                <div class="datas">
+
+                    <div class="data time">
+                        <div class="text">
+                            <span class="descricao">Tempo</span>
+                        </div>
+                        <div class="line">
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="data xp">
+                        <div class="text">
+                            <span class="descricao">Dominio</span>
+                        </div>
+                        <div class="line">
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
 
         </div>
 
-        <div class="rosto">
+        <div data-aos="zoom-out-down" class="rosto">
             <img id="rosto" alt="rosto" src="rosto.png">
         </div>
 
     </div>
 
-    <div class="especializacao" id="habilidades">
-        <br><br><br><br><br><br>
+    <div data-aos="flip-down" class="especializacao" id="habilidades">
+        
         <h2>Minha Especialização</h2>
         <ul>
             <li>Superior em <span>Analise e Desenvolvimento de Sistemas</span> Unisepe</li>
@@ -110,12 +140,12 @@
 
     </div>
 
-    <div class="projetos" id="projetos"> 
+    <div class="projetos" id="projetos">
 
-        <div class="obj1">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="obj1">
             <img class="foto" src="bella.jpg" alt="bella">
         </div>
-        <div class="obj2">
+        <div data-aos="flip-right" class="obj2">
             <h3>Catalago online Bella Pratas</h3>
             <p>Projeto desenvolvido para a loja Bella Pratas, com o objetivo de
                 <br>facilitar a visualização dos produtos e a compra online.
@@ -133,7 +163,7 @@
 
 
 
-        <div class="obj3">
+        <div data-aos="flip-left" class="obj3">
             <h3>Calculadora para dev</h3>
             <p>Projeto desenvolvido em JavaScript, com o objetivo de
                 <br>praticar a lógica de programação<br>
@@ -148,21 +178,22 @@
                 <li>JavaScript</li>
             </ul>
         </div>
-        <div class="obj4">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" class="obj4">
             <img class="foto" src="calc-dev.png" alt="foto">
         </div>
 
 
 
-        <div class="obj5">
-            <img class="foto" src="calc-botao.png" alt="bella">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="obj5">
+            <img class="foto" src="template.png" alt="bella">
         </div>
-        <div class="obj6">
-            <h3>Calculadora Basica</h3>
+        <div data-aos="flip-right" class="obj6">
+            <h3>Template HTML CSS JavaScript</h3>
             <p>Projeto desenvolvido com o objetivo de
-                <br>fazer quatro tipos de calculos com o mesmo valor.
+                <br>praticar modelagem de landin page.
             </p>
-            <a href="https://calbasic.netlify.app/" target="_blank">Acessar</a>
+            <a href="https://template-bluepurple.netlify.app/" target="_blank">Acessar</a>
             <h4>Tecnilogias Utilizadas:</h4>
             <ul>
                 <li>HTML</li>
@@ -173,12 +204,12 @@
 
 
 
-        <div class="obj7">
-            <h3>Conversor</h3>
-            <p>Projeto desenvolvido em JavaScript, com o objetivo de
-                <br>praticar a lógica de programação
+        <div data-aos="flip-left" class="obj7">
+            <h3>Landin Page</h3>
+            <p>Projeto desenvolvido em HTML, CSS e JavaScript, com o objetivo de
+                <br>praticar modelagem
             </p>
-            <a href="https://bella-prataslify.app/" target="_blank">Acessar</a>
+            <a href="https://landin-mentor.netlify.app/" target="_blank">Acessar</a>
             <h4>Tecnilogias Utilizadas:</h4>
             <ul>
                 <li>HTML</li>
@@ -186,16 +217,17 @@
                 <li>JavaScript</li>
             </ul>
         </div>
-        <div class="obj8">
-            <img class="foto" src="conversor.png" alt="foto">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" class="obj8">
+            <img class="foto" src="template-2.png" alt="foto">
         </div>
 
 
 
-        <div class="obj9">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="obj9">
             <img class="foto" src="calc-venda.png" alt="bella">
         </div>
-        <div class="obj10">
+        <div data-aos="flip-right" class="obj10">
             <h3>Calcula preço de venda</h3>
             <p>Projeto desenvolvido com o objetivo de
                 <br>Calcular quanto foi investido em um produto<br>
@@ -212,24 +244,27 @@
 
 
 
-        <div class="obj11">
-            <h3>Pagina de Login</h3>
-            <p>Projeto desenvolvido com o objetivo de
-                <br>praticar programação e modelagem.
+        <div data-aos="flip-left" class="obj11">
+            <h3>Jogo da Memoria Python</h3>
+            <p>Um jogo desenvolvido em Python
+                <br>um simples jogo que fiz para praticar e<br>
+                para minha filha se divertir com ele<br>
+                onde temos seis pares de cores diferentes<br>
+                e o objetivo do jogo é achar todos os pares.
             </p>
-            <a href="https://bella-prataslify.app/" target="_blank">Acessar</a>
+            <a href="https://github.com/gabe8135/jogo_memoria.py" target="_blank">Acessar</a>
             <h4>Tecnilogias Utilizadas:</h4>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>Python</li>
             </ul>
         </div>
-        <div class="obj12">
-            <img class="foto" src="login.png" alt="foto">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" class="obj12">
+            <img class="foto" src="memoria.png" alt="foto">
         </div>
 
 
-        <div class="obj13">
+        <!--<div class="obj13">
             <img class="foto" src="memoria.png" alt="bella">
         </div>
         <div class="obj14">
@@ -245,7 +280,7 @@
             <ul>
                 <li>Python</li>
             </ul>
-        </div>
+        </div> -->
 
 
 
@@ -266,7 +301,8 @@
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="text" name="assunto" placeholder="Assunto" required>
                 <textarea name="message" placeholder="Mensagem" required></textarea>
-                <button id="submit-button" type="submit" name="enviar" value="Enviar" onclick="reloadPage()">ENVIAR</button>
+                <button id="submit-button" type="submit" name="enviar" value="Enviar"
+                    onclick="reloadPage()">ENVIAR</button>
             </form>
 
         </div>

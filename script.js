@@ -1,3 +1,5 @@
+AOS.init();
+
 const btnMobile = document.getElementById('btn-mobile');
 const nav = document.getElementById('nav');
 
@@ -15,3 +17,10 @@ function closeMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 document.addEventListener('click', closeMenu);
+
+/* window.onload = function() {
+  if (window.innerWidth <= 799) {
+    const nav = document.getElementById('hamburger');
+    nav.classList.add('active');
+  }
+}; */
